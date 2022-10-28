@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Click the compass button to find your coordinates.</h1>
+
+<button onclick="getLocation()">compass</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Your Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "your current Latitude is : " + position.coords.latitude + 
+  "<br>your current Longitude is: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+

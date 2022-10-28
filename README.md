@@ -1,0 +1,1 @@
+Simple compass made with Javascript geolocation API
